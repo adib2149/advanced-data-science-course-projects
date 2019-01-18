@@ -124,8 +124,12 @@ div2.append('p').text(function(d) {
 
 
 
+// setting up the canvas
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
-
+    
 
 // QUES 3
 // setting up x-axis
@@ -149,11 +153,6 @@ var yValue = function(d) { return d.y;},
 var cValue = function(d) { return d.Manufacturer;},
     color = d3.scale.category10();
 
-// setting up the canvas
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 400 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
-
 // adding graph canvas
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -170,6 +169,10 @@ var tooltip = d3.select("body").append("div")
 xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
 yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
 
+
+
+
+// QUES 6
 // x-axis
 svg.append("g")
     .attr("class", "x axis")
