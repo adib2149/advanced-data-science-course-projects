@@ -118,7 +118,7 @@ function mode(arr) {
 }
 
 var div2 = d3.select('body').append('div')
-div2.append('h1').text(function(d) { return "Mean, median and standard deviation:"; });
+div2.append('h1').text(function(d) { return "Mean, median, mode and standard deviation:"; });
 div2.append('h2').text(function(d) { return "1st array"; });
 div2.append('p').text(function(d) { 
   return "Mean: " + d3.mean(pointsX) + ", Median: " + d3.median(pointsX) + ", Mode: " + mode(pointsX) + ", Standard deviation: " + d3.deviation(pointsX); 
