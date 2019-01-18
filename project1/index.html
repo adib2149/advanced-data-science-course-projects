@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+
+<!--
+  The code is hosted live at: https://adib2149.github.io/advanced-data-science-course-projects/project1/index.html
+  Code inspiration: http://bl.ocks.org/weiglemc/6185069
+-->
+
 <meta charset="utf-8">
 <style>
 body {
@@ -129,7 +135,10 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 400 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
 
-    
+var div3 = d3.select('body').append('div')
+div3.append('h1').text(function(d) { return "Scatter plot:"; });
+
+
 
 // QUES 3
 // setting up x-axis
@@ -183,7 +192,7 @@ svg.append("g")
     .attr("x", width)
     .attr("y", -6)
     .style("text-anchor", "end")
-    .text("Age of students");
+    .text("Count of Michael Scott's joke");
 
 // y-axis
 svg.append("g")
@@ -195,7 +204,7 @@ svg.append("g")
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .text("Number of pencils");
+    .text("Count of Kevin Malone's awkward look");
 
 
 // QUES 5
